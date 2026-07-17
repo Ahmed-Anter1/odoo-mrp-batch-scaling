@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="view_mrp_production_form_portfolio_batch" model="ir.ui.view">
+    <field name="name">mrp.production.form.portfolio.batch</field>
+    <field name="model">mrp.production</field>
+    <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+    <field name="arch" type="xml">
+      <xpath expr="//sheet//group" position="inside">
+        <group string="Batch Scaling">
+          <field name="enable_batch_scaling"/>
+          <field name="batch_count" invisible="not enable_batch_scaling"/>
+          <field name="machine_size" invisible="not enable_batch_scaling"/>
+        </group>
+      </xpath>
+    </field>
+  </record>
+</odoo>
